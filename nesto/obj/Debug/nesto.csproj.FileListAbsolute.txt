@@ -1,0 +1,6 @@
+C:\nesto\bin\Debug\nesto.exe
+C:\nesto\bin\Debug\nesto.pdb
+C:\nesto\obj\Debug\nesto.csproj.AssemblyReference.cache
+C:\nesto\obj\Debug\nesto.csproj.CoreCompileInputs.cache
+C:\nesto\obj\Debug\nesto.exe
+C:\nesto\obj\Debug\nesto.pdb
