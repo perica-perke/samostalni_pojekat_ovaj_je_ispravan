@@ -14,7 +14,6 @@ namespace nesto
             return new SqlConnection(ConnectionString);
         }
 
-        // ─── WEBSAJTOVI ───────────────────────────────────────────────
 
         public static DataTable GetWebsajtovi()
         {
@@ -67,7 +66,6 @@ namespace nesto
             }
         }
 
-        // ─── SKREJPOVI ────────────────────────────────────────────────
 
         public static DataTable GetSkrejpovi()
         {
@@ -126,7 +124,6 @@ namespace nesto
             }
         }
 
-        // ─── KORISNIK ─────────────────────────────────────────────────
 
         public static DataTable GetKorisnici()
         {
@@ -179,7 +176,6 @@ namespace nesto
             }
         }
 
-        // ─── UTAKMICE ─────────────────────────────────────────────────
 
         public static DataTable GetUtakmice()
         {
@@ -238,7 +234,6 @@ namespace nesto
             }
         }
 
-        // ─── HELPERS ──────────────────────────────────────────────────
 
         public static DataTable GetWebsajtoviForeignKey()
         {
