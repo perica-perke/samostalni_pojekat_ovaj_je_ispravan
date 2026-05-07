@@ -7,7 +7,7 @@ namespace nesto
 {
     public class FormMain : Form
     {
-        // ── Controls ──────────────────────────────────────────────────
+
         private TabControl tabControl;
 
         // Websajtovi tab

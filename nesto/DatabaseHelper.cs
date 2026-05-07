@@ -7,7 +7,7 @@ namespace nesto
     public static class DatabaseHelper
     {
         private static readonly string ConnectionString =
-            @"Server=DESKTOP-PRM3K4Q\SQLEXPRESS;Database=skrejpovanje_neko;Integrated Security=True;";
+            @"Server=DESKTOP-GS0U2J7\SQLEXPRESS;Database=skrejpovanje;Integrated Security=True;";
 
         private static SqlConnection GetConnection()
         {
@@ -268,6 +268,39 @@ namespace nesto
                 var dt = new DataTable();
                 da.Fill(dt);
                 return dt;
+            }
+        }
+
+        public static bool LoginUser(string ime, string password)
+        {
+            using (var conn = GetConnection())
+            using (var cmd = new SqlCommand(
+                "SELECT COUNT(*) FROM korisnik WHERE ime=@ime AND password_hash=@password", conn))
+            {
+                cmd.Parameters.AddWithValue("@ime", ime);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                conn.Open();
+
+                int count = (int)cmd.ExecuteScalar();
+
+                return count > 0;
+            }
+        }
+
+        public static bool UserExists(string ime)
+        {
+            using (var conn = GetConnection())
+            using (var cmd = new SqlCommand(
+                "SELECT COUNT(*) FROM korisnik WHERE ime=@ime", conn))
+            {
+                cmd.Parameters.AddWithValue("@ime", ime);
+
+                conn.Open();
+
+                int count = (int)cmd.ExecuteScalar();
+
+                return count > 0;
             }
         }
     }
